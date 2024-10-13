@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/forma-de-pagamento.png" type="image/x-icon">
+    <title>Sistema de Lembretes de Pagamento</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.7.0/chart.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Sistema de Lembretes de Pagamento</h1>
+        
+        <div id="dashboard">
+            <div class="dashboard-item">
+                <h2>Informações Gerais</h2>
+                <p>Valor inicial: R$ 5.107,00</p>
+                <p>Número de parcelas: 18</p>
+                <p>Valor da parcela: R$ <span id="parcelaValor"></span></p>
+            </div>
+            <div class="dashboard-item">
+                <h2>Status Atual</h2>
+                <p>Próximo pagamento: <span id="proximoPagamento"></span></p>
+                <p>Valor restante: R$ <span id="valorRestante"></span></p>
+                <p>Parcelas pagas: <span id="parcelasPagas"></span></p>
+            </div>
+        </div>
+
+        <div id="chart-container">
+            <canvas id="paymentChart"></canvas>
+        </div>
+
+        <div id="actions">
+            <h2>Ações</h2>
+            <button onclick="registrarPagamento()">Registrar Pagamento</button>
+        </div>
+
+        <div id="history">
+            <h2>Histórico de Pagamentos</h2>
+            <table id="historicoTabela">
+                <tr>
+                    <th>Data</th>
+                    <th>Valor Pago</th>
+                    <th>Valor Restante</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
